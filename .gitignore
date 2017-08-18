@@ -7,3 +7,10 @@
 /orderweb/*.iml
 /storageweb/*.iml
 /*.iml
+/architectureweb/target
+/cartweb/target
+/common/target
+/customerweb/target
+/goodsweb/target
+/orderweb/target
+/storageweb/target
