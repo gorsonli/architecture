@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gorson.customerweb.mapper.CustomerMapperXml" >
+    <!--<cache type="org.mybatis.caches.ehcache.EhcacheCache"/>-->
+
+    <insert id="insert"
+            parameterType="com.gorson.customerweb.vo.CustomerModel">
+        INSERT INTO
+        tbl_customer
+        (customerId,pwd,showName,trueName,registerTime)
+        VALUES
+        (#{customerId},#{pwd},#{showName},#{trueName},#{registerTime})
+    </insert>
+
+    <update id="update"
+            parameterType="com.gorson.customerweb.vo.CustomerModel">
+        UPDATE tbl_customer SET customerId=#{customerId},pwd=#{pwd},
+        showName=#{showName},trueName=#{trueName},registerTime=#{registerTime}
+        WHERE uuid=#{uuid}
+    </update>
+
+    <delete id="delete"
+            parameterType="int">
+        DELETE FROM tbl_customer WHERE uuid=#{uuid}
+    </delete>
+
+    <select id="getByUuid"
+            parameterType="int"
+            resultType="com.gorson.customerweb.vo.CustomerModel">
+        SELECT * FROM tbl_customer WHERE uuid=#{uuid}
+    </select>
+
+    <!--<select id="getByCustomerId"-->
+            <!--parameterType="String"-->
+            <!--resultMap="CustomerResultMap">-->
+        <!--select * from tbl_customer where customerId=#{customerId}-->
+    <!--</select>-->
+
+    <!--<select id="getByCondition"-->
+            <!--parameterType="com.gorson.customerweb.vo.CustomerQueryModel"-->
+            <!--resultType="com.gorson.customerweb.vo.CustomerModel">-->
+        <!--SELECT * FROM tbl_customer-->
+        <!--<where>-->
+            <!--<if test="uuid!=null &amp;&amp; uuid > 0">-->
+                <!--AND uuid=#{uuid}-->
+            <!--</if>-->
+            <!--<if test="customerId!=null &amp;&amp; customerId!=''">-->
+                <!--AND customerId=#{customerId}-->
+            <!--</if>-->
+            <!--<if test="showName!=null &amp;&amp; showName!=''">-->
+                <!--AND showName=#{showName}-->
+            <!--</if>-->
+        <!--</where>-->
+    <!--</select>-->
+</mapper>
