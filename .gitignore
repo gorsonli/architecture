@@ -1,16 +1,25 @@
-/.idea
-/architectureweb/*.iml
-/cartweb/*.iml
-/common/*.iml
-/customerweb/*.iml
-/goodsweb/*.iml
-/orderweb/*.iml
-/storageweb/*.iml
-/*.iml
-/architectureweb/target
-/cartweb/target
-/common/target
-/customerweb/target
-/goodsweb/target
-/orderweb/target
-/storageweb/target
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
