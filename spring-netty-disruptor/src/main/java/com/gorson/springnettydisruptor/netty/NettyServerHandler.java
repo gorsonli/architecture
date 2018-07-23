@@ -21,7 +21,6 @@ import static org.springframework.http.HttpHeaders.CONTENT_TYPE;
 /**
  * 此类的描述是：
  *
- * @author GorsonLi@wezhuiyi.com
  * @create 2018-04-01 19:07
  **/
 public class NettyServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {

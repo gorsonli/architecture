@@ -16,7 +16,6 @@ import java.util.concurrent.Executors;
 /**
  * 此类的描述是：
  *
- * @author GorsonLi@wezhuiyi.com
  * @create 2018-06-03 22:45
  **/
 @Service

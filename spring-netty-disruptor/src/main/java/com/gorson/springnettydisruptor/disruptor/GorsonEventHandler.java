@@ -5,7 +5,6 @@ import com.lmax.disruptor.EventHandler;
 /**
  * 此类的描述是：事件处理器
  *
- * @author GorsonLi@wezhuiyi.com
  * @create 2018-06-03 22:45
  **/
 public class GorsonEventHandler implements EventHandler<GorsonEvent> {
